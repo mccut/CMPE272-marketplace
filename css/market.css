@@ -1,0 +1,163 @@
+.navbar {
+    margin-bottom: 0;
+}
+
+.album {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f7f7f7;
+}
+
+.card {
+    float: left;
+    /*width: 33.333%;*/
+    width: 15rem;
+    padding: .6rem;
+    margin-bottom: 2rem;
+    border: 0;
+}
+
+.card > img {
+    margin-bottom: .75rem;
+    height: 400px;
+    width: 300px;
+    align-items: center;
+}
+
+.card-text {
+    font-size: 85%;
+}
+
+.row-height {
+    margin: auto;
+    height: 100%;
+}
+
+#titlerow {
+    height: 70px;
+}
+
+#plotrow {
+    height: 220px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+button, .btn{
+	background-color: #39b3d7;
+	min-width: 100px;
+	border: none;
+	padding: 10px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	color: #FFF;
+	min-height: 15px;
+	font: 12px/15px Arial, Helvetica, sans-serif;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
+	border-radius: 3px;
+}
+
+button:hover, .button:hover{
+	background-color: #44C7ED;
+}
+
+.shopping-cart{
+	position: fixed;
+	top: 100px;
+	right: 0;
+	background-color: #f7f7f7;
+	padding: 10px;
+	min-width: 250px;
+	list-style: none;
+	font-size: 0.8em;
+	border: 1px solid #f7f7f7;
+}
+
+.shopping-cart .cart-itm {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 8px;
+}
+
+.shopping-cart .cart-itm:last-child{
+	border-bottom: none;
+	margin-bottom: 0px;
+}
+
+.shopping-cart .cart-itm .remove-itm{
+	float: right;
+	font-size: 1.5em;
+}
+
+.shopping-cart .cart-itm .remove-itm a{
+	text-decoration:none;
+	color:#000;
+}
+
+.cart-total-text a{
+	float:right;
+}
+
+.cart-view-table-front{
+	font-size: 0.7em;
+	position: fixed;
+	right: 10px;
+	max-width: 350px;
+	font-family: Arial
+}
+
+.cart-view-table-front h3{
+	text-align: center;
+	padding: 0;
+	margin: 0px 0px 6px 0px;
+}
+
+.cart-view-table-front, .cart-view-table-back {
+	max-width: 700px;
+	background-color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.12);
+	border: 1px solid #E4E4E4;
+}
+
+.cart-view-table-front table th, .cart-view-table-back table th{
+	text-align: left;
+}
+
+.cart-view-table-front table thead, .cart-view-table-back table thead{
+	background-color: #9CCDFD;
+}
+
+.cart-view-table-front table tbody tr.even, .cart-view-table-back table tbody tr.even{
+	background-color: #F7F7F7;
+}
+
+.cart-view-table-front table tbody tr.odd, .cart-view-table-back table tbody tr.odd{
+	background-color: #EDEDED;
+}
+
+.cart-view-table-front button, .cart-view-table-front .btn, .cart-view-table-back button, .cart-view-table-back .btn{
+	margin: 10px 1px;
+	float: right;
+}
+
+h5 {
+	text-align: left;
+}

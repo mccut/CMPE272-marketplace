@@ -1,0 +1,42 @@
+html,
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* cover */
+#cover {
+    background: #222 url("../img/stars.jpg") center center no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#cover-caption {
+    width: 100%;
+}
+
+.container {
+    margin: auto;
+}
+
+.col-sm-10 {
+    margin: auto;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}

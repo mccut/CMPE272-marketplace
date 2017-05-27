@@ -1,0 +1,14 @@
+.section-content {
+    padding: 5rem 0;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}

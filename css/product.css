@@ -1,0 +1,85 @@
+.navbar {
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    background-image: url("../img/wall.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.jumbotron-heading {
+    font-weight: 300;
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+    background: rgba(0,0,0,0.8);
+    padding: 2rem;
+    color: white;
+}
+
+.jumbotron p {
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5)
+}
+
+.album {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f7f7f7;
+}
+
+.card {
+    float: left;
+    /*width: 33.333%;*/
+    width: 15rem;
+    padding: .6rem;
+    margin-bottom: 2rem;
+    border: 0;
+}
+
+.card > img {
+    margin-bottom: .75rem;
+    height: 400px;
+    width: 300px;
+    align-items: center;
+}
+
+.card-text {
+    font-size: 85%;
+}
+
+.row-height {
+    margin: auto;
+    height: 100%;
+}
+
+#titlerow {
+    height: 70px;
+}
+
+#plotrow {
+    height: 160px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
+
+.container {
+    margin: 0 auto;
+}
+

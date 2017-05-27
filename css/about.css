@@ -1,0 +1,28 @@
+.section-content {
+    padding: 5rem 0;
+}
+
+#about {
+    /*padding-top: 50px;*/
+    background: url('../img/about.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.about-text {
+    text-align: left;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 1.875rem;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    margin-bottom: .25rem;
+}
