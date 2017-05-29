@@ -64,29 +64,6 @@ require_once 'mysql.php';
                 foreach ($row as $name => $value) {
                     if ($name == "image") { // for poster dispaly
                         print "        <td><img src=\"img/$value\"  width=\"300\" height=\"400\"/></td>";
-print<<<HERE
-<td>
-    <div class="tuto-cnt">
-        <div class="rate-ex1-cnt">
-            <form id="form" name="form">
-            <label for="rating">Please rate our product:</label>
-                <div id="1" class="rate-btn-1 rate-btn"></div>
-                <div id="2" class="rate-btn-2 rate-btn"></div>
-                <div id="3" class="rate-btn-3 rate-btn"></div>
-                <div id="4" class="rate-btn-4 rate-btn"></div>
-                <div id="5" class="rate-btn-5 rate-btn"></div>
-                <br>
-            <label for="review">Please give your review:</label>
-                 <textarea class="form-control" style="max-width:600px" rows="5" id="review"></textarea>
-                <br>
-                <input id="submit" onclick="myFunction()" class="btn btn-success " value="Submit">
-            </form>
-        </div>
-    </div><!-- /tuto-cnt -->
-    
-    
-</td>
-HERE;
                     } else {
                         print "    <tr>\n";
                         print "        <td>$name</td>\n"; 
@@ -95,44 +72,6 @@ HERE;
                     }
                 }
             }
-                print "    <tr>\n";
-                print "        <td>rating</td>";
-                print "        <td>";
-                print "<div class=\"box-result-cnt\">\n";
-
-                //$query = mysql_query("SELECT * FROM wcd_rate"); 
-                $rate = $conn->query("SELECT rating FROM Ratings WHERE movie_id=\"$id\"");
-                $rate->setFetchMode(PDO::FETCH_ASSOC);
-                if ($rate->rowCount() != 0) {
-                    $rate_times = $rate->rowCount();
-                    $sum_rates = 0;
-                    foreach ($rate as $row) {
-                        $sum_rates += $row["rating"];
-                    }
-                    $rate_value = $sum_rates/$rate_times;
-                    $rate_bg = (($rate_value)/5)*100;
-                } else{
-                    $rate_times = 0;
-                    $rate_value = 0;
-                    $rate_bg = 0;
-                }
-                print '<p>The content was rated <strong>';
-                echo $rate_times;
-                print '</strong> times. ';
-                print 'The rating is at <strong>';
-                echo $rate_value;
-                print '</strong> .</p>';
-                
-                print "<div class=\"rate-result-cnt\">\n"; //??
-                print '    <div class="rate-bg" style="width:';
-                echo $rate_bg;
-                print '</div>';
-                print '<div class="rate-stars"></div>';
-                print '</div>';
-                print '</div><!-- /rate-result-cnt -->';
-                
-                print "        </td>";
-                print "        </tr>\n";
                 print "    </table>\n";
                 print "</div>\n";
         }
@@ -231,64 +170,6 @@ HERE;
         echo 'ERROR: '.$ex->getMessage();
     }?>
 
-<script type="text/javascript">
-    function codeAddress() {
-      var rating = parseInt('<?php echo $rating; ?>');
-      var j = parseInt(rating);
-      $('.rate-btn-fixed').removeClass('rate-btn-fixed-hover');
-      for (var i = j; i >= 0; i--) {
-          $('.rate-btn-fixed'+i).addClass('rate-btn-fixed-active');
-      };
-      var half_star = parseInt('<?php echo $half_star; ?>');
-      if ( half_star > 0) {
-        j = j + 1;
-        $('.rate-btn-fixed'+j).addClass('rate-btn-fixed-half');
-      };
-    }
-    window.onload = codeAddress;
-
-
-    var therate = 1;
-    
-
-    $('.rate-btn').hover(function(){
-        $('.rate-btn').removeClass('rate-btn-hover');
-        var therating = $(this).attr('id');
-        for (var i = therating; i >= 0; i--) {
-            $('.rate-btn-'+i).addClass('rate-btn-hover');
-        };
-    });
-                    
-    $('.rate-btn').click(function(){   
-        therate = $(this).attr('id');
-        $('.rate-btn').removeClass('rate-btn-active');
-        for (var i = therate; i >= 0; i--) {
-            $('.rate-btn-'+i).addClass('rate-btn-active');
-        };
-    });
-
-    
-    function myFunction() {
-
-      var comment = document.getElementById("comment").value;
-      var dataRate = 'act=rate&return_url=<?php echo $current_url; ?>&product_id=<?php echo $HIDDEN_ID; ?>&comment='+comment+'&rate='+therate;
-      // Returns successful data submission message when the entered information is stored in database.
-
-      // AJAX code to submit form.
-      $.ajax({
-        type: "POST",
-        url: "ajax.php",
-        data: dataRate,
-        cache: false,
-        success:function(){alert("Data was succesfully captured");}
-      });
-      
-
-      return false;
-
-      }
-      
-</script>
     <?php
     require_once "footer.php";
     ?>
